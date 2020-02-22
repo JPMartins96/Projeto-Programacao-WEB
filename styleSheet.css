@@ -1,0 +1,90 @@
+@font-face{
+    font-family: 'Source Sans Pro';
+    src: url('files/fonts/SourceSansPro.otf');
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+  
+@media only screen and (min-width: 800px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;} 
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+body{
+    background-image: url('images/indexBackgroundSmall.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+}
+
+/* For width 400px and larger: */
+@media only screen and (min-width: 800px) {
+    body { 
+        background-image: url('images/indexBackground.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.box{
+    background-color:rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+input[type=email],[type=password],[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: #1a1a1a;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+input[type=submit],[type=button]{
+    margin-top: 10px;
+    background-color: #1a1a1a;
+    border-color: #1a1a1a;
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+select{
+    left: 0px;
+    padding: 12px 20px;
+    margin-top: 10px;
+    border-style: solid;
+    border-color: #1a1a1a;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
+}

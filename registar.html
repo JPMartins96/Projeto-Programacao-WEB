@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registar</title>
+        <link rel="stylesheet" href="styleSheet.css">
+        <link rel="icon" href="images/logo.png">
+        <script>
+            function validaFormulario(){
+                var prePassword = document.forms["registo"]["prePassword"].value;
+                var Password = document.forms["registo"]["password"].value;
+                
+                if(prePassword!=Password){
+                    alert("As Passwords não coincidem.");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 box">
+                <img style="width: 50%;" src="images/logo.png" alt="logo">
+                <form action="php/registar.php" method="POST" name="registo" onsubmit="return validaFormulario()">
+                    <select name="titulo">
+                        <option value="Sr.">Sr.</option>
+                        <option value="Sra.">Sra.</option>
+                        <option value="Dr.">Dr.</option>
+                        <option value="Dra.">Dra.</option>
+                        <option value="Prof. Dr.">Prof. Dr.</option>
+                        <option value="Profa. Dra.">Profa. Dra.</option>
+                        <option value="Eng.">Eng.</option>
+                        <option value="Enga.">Enga.</option>
+                    </select>
+                    <input type="text" placeholder="Nome" name="nome" max="20" alt="nome" required>
+                    <input type="text" placeholder="Apelido" name="apelido" max="20" alt="apelido" required>
+                    <input type="email" name="email" placeholder="e-mail" max="50" alt="email" required>
+                    <input type="password" placeholder="Password" name="prePassword" alt="password" max="15" min="6" required>
+                    <input type="password" placeholder="Confirmar Password" alt="Conformar Password" name="password" max="15" min="6" required>
+                    <input type="submit" name="registar" alt="login" value="Registar">
+                    <input type="button" name="voltar" alt="voltar" value="Voltar" onclick="location.href='index.php';">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
